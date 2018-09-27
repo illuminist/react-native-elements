@@ -3,337 +3,239 @@
 /*eslint-disable no-console */
 import times from 'lodash.times';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import {
-  View,
   Animated,
   PanResponder,
-  Image,
   StyleSheet,
-  Platform,
+  TouchableOpacity,
+  View,
 } from 'react-native';
-
-import Text from '../text/Text';
 import ViewPropTypes from '../config/ViewPropTypes';
+import Icon from '../icons/Icon';
 
-const STAR_IMAGE = require('./images/star.png');
-const HEART_IMAGE = require('./images/heart.png');
-const ROCKET_IMAGE = require('./images/rocket.png');
-const BELL_IMAGE = require('./images/bell.png');
-
-const STAR_WIDTH = 60;
-
-const TYPES = {
+const styles = StyleSheet.create({
+  outerContainer: {
+    display: 'flex',
+    // backgroundColor: '#cda',
+    position: 'relative',
+  },
+  starContainer: {
+    flexDirection: 'row',
+    flexWrap: 'nowrap',
+    position: 'absolute',
+  },
+  blankStarContainer: {
+    // backgroundColor: '#bcd',
+  },
+  fullStarContainer: {
+    overflow: 'hidden',
+    // backgroundColor: '#dcb',
+  },
   star: {
-    source: STAR_IMAGE,
-    color: '#f1c40f',
-    backgroundColor: 'white',
+    flex: 1,
   },
-  heart: {
-    source: HEART_IMAGE,
-    color: '#e74c3c',
-    backgroundColor: 'white',
-  },
-  rocket: {
-    source: ROCKET_IMAGE,
-    color: '#2ecc71',
-    backgroundColor: 'white',
-  },
-  bell: {
-    source: BELL_IMAGE,
-    color: '#f39c12',
-    backgroundColor: 'white',
-  },
-};
+});
 
-export default class Rating extends Component {
+class Rating extends PureComponent {
   static defaultProps = {
-    type: 'star',
-    ratingImage: require('./images/star.png'),
-    ratingColor: '#f1c40f',
-    ratingBackgroundColor: 'white',
-    ratingCount: 5,
-    showReadOnlyText: true,
-    imageSize: STAR_WIDTH,
-    onFinishRating: () => console.log('Attach a function here.'),
+    blankIconColor: '#FFC423',
+    blankIconName: 'star-border',
+    fractions: 0,
+    fullIconColor: '#FFC423',
+    fullIconName: 'star',
+    iconSize: 40,
+    maxValue: 5,
+    onChangeValue: value => console.log('Attach function here', value),
+    readonly: false,
+    value: 3,
   };
 
   constructor(props) {
     super(props);
 
-    const { onFinishRating, fractions } = this.props;
+    const previewValue = new Animated.Value(0);
 
-    const position = new Animated.ValueXY();
-
-    const panResponder = PanResponder.create({
-      onStartShouldSetPanResponder: () => true,
-      onPanResponderMove: (event, gesture) => {
-        const newPosition = new Animated.ValueXY();
-        newPosition.setValue({ x: gesture.dx, y: 0 });
-        this.setState({ position: newPosition, value: gesture.dx });
-      },
-      onPanResponderRelease: () => {
-        const rating = this.getCurrentRating();
-        if (!fractions) {
-          // "round up" to the nearest star/rocket/whatever
-          this.setCurrentRating(rating);
-        }
-        onFinishRating(rating);
-      },
+    this.panResponder = PanResponder.create({
+      // Prevent pan response losing response on a component
+      onPanResponderTerminationRequest: () => false,
+      // Make pan response to response after drag move
+      // allow user to touch an icon to set value
+      onMoveShouldSetPanResponder: () => true,
+      onMoveShouldSetPanResponderCapture: () => true,
+      onPanResponderMove: this.handlePanMove,
+      onPanResponderRelease: this.handlePanRelease,
     });
 
-    this.state = { panResponder, position };
-  }
-
-  componentDidMount() {
-    this.setCurrentRating(this.props.startingValue);
-  }
-
-  getPrimaryViewStyle() {
-    const { position } = this.state;
-    const { imageSize, ratingCount, type } = this.props;
-
-    const color = TYPES[type].color;
-
-    const width = position.x.interpolate(
-      {
-        inputRange: [
-          -ratingCount * (imageSize / 2),
-          0,
-          ratingCount * (imageSize / 2),
-        ],
-        outputRange: [0, ratingCount * imageSize / 2, ratingCount * imageSize],
-        extrapolate: 'clamp',
-      },
-      { useNativeDriver: true }
-    );
-
-    return {
-      backgroundColor: color,
-      width,
-      height: width ? imageSize : 0,
+    this.state = {
+      startingValue: props.value,
+      targetValue: 0,
+      previewValue,
     };
   }
 
-  getSecondaryViewStyle() {
-    const { position } = this.state;
-    const { imageSize, ratingCount, type } = this.props;
+  componentDidMount = () => {
+    this.setTargetValue(this.props.value);
+  };
 
-    const backgroundColor = TYPES[type].backgroundColor;
+  componentDidUpdate = prevProps => {
+    const { value } = this.props;
+    if (prevProps.value !== value) {
+      this.setState(
+        {
+          startingValue: value,
+        },
+        () => this.setTargetValue(value)
+      );
+    }
+  };
 
-    const width = position.x.interpolate(
+  cleanValue = value => {
+    const { fractions, readonly } = this.props;
+    if (readonly) {
+      // If is readonly then ignore value cleaning
+      return value;
+    }
+    if (fractions > 0 && fractions < 1) {
+      // Icon part division
+      return Math.round(value / fractions) * fractions;
+    }
+    // Icon decimal division
+    return Math.round(value * 10 ** fractions) / 10 ** fractions;
+  };
+
+  setTargetValue = value => {
+    this.setState(
       {
-        inputRange: [
-          -ratingCount * (imageSize / 2),
-          0,
-          ratingCount * (imageSize / 2),
-        ],
-        outputRange: [ratingCount * imageSize, ratingCount * imageSize / 2, 0],
-        extrapolate: 'clamp',
+        targetValue: this.cleanValue(value),
       },
-      { useNativeDriver: true }
+      () => this.setPreviewValue(this.state.targetValue)
     );
+  };
 
-    return {
-      backgroundColor,
-      width,
-      height: width ? imageSize : 0,
-    };
-  }
+  setPreviewValue = value => {
+    Animated.spring(this.state.previewValue, {
+      toValue: value,
+    }).start();
+  };
 
-  renderRatings() {
-    const { imageSize, ratingCount, type } = this.props;
-    const source = TYPES[type].source;
+  handleIconPress = value => () => {
+    const cleanedValue = this.cleanValue(value);
+    this.props.onChangeValue(cleanedValue);
+    this.setState(
+      {
+        startingValue: cleanedValue,
+      },
+      this.setTargetValue(value)
+    );
+  };
 
-    return times(ratingCount, index => (
-      <View key={index} style={styles.starContainer}>
-        <Image
-          source={source}
-          style={{ width: imageSize, height: imageSize }}
-        />
-      </View>
-    ));
-  }
+  handlePanMove = (e, gesture) => {
+    const { iconSize } = this.props;
+    const { startingValue } = this.state;
+    const dvalue = gesture.dx / iconSize;
+    this.setTargetValue(startingValue + dvalue);
+  };
 
-  getCurrentRating() {
-    const { value } = this.state;
-    const { fractions, imageSize, ratingCount } = this.props;
-    const startingValue = ratingCount / 2;
-    let currentRating = 0;
+  handlePanRelease = () => {
+    const { onChangeValue } = this.props;
+    const { targetValue: value } = this.state;
+    onChangeValue(value);
+    this.setState({
+      startingValue: value,
+    });
+  };
 
-    if (value > ratingCount * imageSize / 2) {
-      currentRating = ratingCount;
-    } else if (value < -ratingCount * imageSize / 2) {
-      currentRating = 0;
-    } else if (value < imageSize || value > imageSize) {
-      currentRating = startingValue + value / imageSize;
-      currentRating = !fractions
-        ? Math.ceil(currentRating)
-        : +currentRating.toFixed(fractions);
-    } else {
-      currentRating = !fractions
-        ? Math.ceil(startingValue)
-        : +startingValue.toFixed(fractions);
+  renderSingleStar = (iconName, iconColor, index) => {
+    const { iconSize, readonly } = this.props;
+    const star = (
+      <Icon
+        key={index}
+        size={iconSize}
+        style={styles.star}
+        name={iconName}
+        color={iconColor}
+      />
+    );
+    if (readonly) {
+      return star;
     }
-
-    return currentRating;
-  }
-
-  setCurrentRating(rating) {
-    const { imageSize, ratingCount } = this.props;
-    // `initialRating` corresponds to `startingValue` in the getter. Naming it
-    // differently here avoids confusion with `value` below.
-    const initialRating = ratingCount / 2;
-    let value = null;
-
-    if (rating > ratingCount) {
-      value = ratingCount * imageSize / 2;
-    } else if (rating < 0) {
-      value = -ratingCount * imageSize / 2;
-    } else if (rating < ratingCount / 2 || rating > ratingCount / 2) {
-      value = (rating - initialRating) * imageSize;
-    } else {
-      value = 0;
-    }
-
-    const newPosition = new Animated.ValueXY();
-    newPosition.setValue({ x: value, y: 0 });
-    this.setState({ position: newPosition, value });
-  }
-
-  displayCurrentRating() {
-    const {
-      ratingCount,
-      type,
-      ratingTextColor,
-      readonly,
-      showReadOnlyText,
-    } = this.props;
-
-    const color = ratingTextColor || TYPES[type].color;
-
-    const showReadOnlyText_ = showReadOnlyText && readonly;
-
     return (
-      <View style={styles.showRatingView}>
-        <View style={styles.ratingView}>
-          <Text style={[styles.ratingText, { color }]}>Rating: </Text>
-          <Text style={[styles.currentRatingText, { color }]}>
-            {this.getCurrentRating()}
-          </Text>
-          <Text style={[styles.maxRatingText, { color }]}>/{ratingCount}</Text>
-        </View>
-        <View>
-          {showReadOnlyText_ && (
-            <Text style={[styles.readonlyLabel, { color }]}>(readonly)</Text>
-          )}
-        </View>
-      </View>
+      <TouchableOpacity key={index} onPress={this.handleIconPress(index + 1)}>
+        {star}
+      </TouchableOpacity>
     );
-  }
+  };
+
+  renderStars = (iconName, iconColor) => {
+    const { maxValue } = this.props;
+    return times(maxValue, i => this.renderSingleStar(iconName, iconColor, i));
+  };
 
   render() {
     const {
+      blankIconColor,
+      blankIconName,
+      fullIconColor,
+      fullIconName,
+      iconSize,
+      maxValue,
       readonly,
-      type,
-      ratingImage,
-      ratingColor,
-      ratingBackgroundColor,
       style,
-      showRating,
     } = this.props;
-
-    if (type === 'custom') {
-      let custom = {
-        source: ratingImage,
-        color: ratingColor,
-        backgroundColor: ratingBackgroundColor,
-      };
-      TYPES.custom = custom;
-    }
+    const { previewValue } = this.state;
 
     return (
-      <View pointerEvents={readonly ? 'none' : 'auto'} style={style}>
-        {showRating && this.displayCurrentRating()}
-        <View
-          style={styles.starsWrapper}
-          {...this.state.panResponder.panHandlers}
-        >
-          <View style={styles.starsInsideWrapper}>
-            <Animated.View style={this.getPrimaryViewStyle()} />
-            <Animated.View style={this.getSecondaryViewStyle()} />
-          </View>
-          {this.renderRatings()}
+      <View
+        style={[
+          styles.outerContainer,
+          style,
+          {
+            height: iconSize,
+            width: iconSize * maxValue,
+          },
+        ]}
+        pointerEvents={readonly ? 'none' : 'auto'}
+        {...(readonly ? {} : this.panResponder.panHandlers)}
+      >
+        <View style={[styles.starContainer, styles.blankStarContainer]}>
+          {this.renderStars(blankIconName, blankIconColor)}
         </View>
+        <Animated.View
+          style={[
+            styles.starContainer,
+            styles.fullStarContainer,
+            {
+              width: previewValue.interpolate({
+                inputRange: [0, maxValue],
+                outputRange: [0, maxValue * iconSize],
+                extrapolate: 'clamp',
+              }),
+            },
+          ]}
+        >
+          {this.renderStars(fullIconName, fullIconColor)}
+        </Animated.View>
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  starsWrapper: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  starsInsideWrapper: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  showRatingView: {
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingBottom: 5,
-  },
-  ratingView: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingBottom: 5,
-  },
-  ratingText: {
-    fontSize: 15,
-    textAlign: 'center',
-    fontFamily: Platform.OS === 'ios' ? 'Trebuchet MS' : null,
-    color: '#34495e',
-  },
-  readonlyLabel: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    fontSize: 12,
-    textAlign: 'center',
-    fontFamily: Platform.OS === 'ios' ? 'Trebuchet MS' : null,
-    color: '#34495a',
-  },
-  currentRatingText: {
-    fontSize: 30,
-    textAlign: 'center',
-    fontFamily: Platform.OS === 'ios' ? 'Trebuchet MS' : null,
-  },
-  maxRatingText: {
-    fontSize: 18,
-    textAlign: 'center',
-    fontFamily: Platform.OS === 'ios' ? 'Trebuchet MS' : null,
-    color: '#34495e',
-  },
-});
-
 const fractionsType = (props, propName, componentName) => {
   if (props[propName]) {
     const value = props[propName];
     if (typeof value === 'number') {
-      return value >= 0 && value <= 20
-        ? null
-        : new Error(
-            `\`${propName}\` in \`${componentName}\` must be between 0 and 20`
-          );
+      if (value < 0 || value > 20) {
+        return new Error(
+          `\`${propName}\` in \`${componentName}\` must be between 0 and 20`
+        );
+      }
+      if (value > 1 && !Number.isInteger(value)) {
+        return new Error(
+          `\`${propName}\` in \`${componentName}\` must be either decimal in between 0 and 1 inclusively or be integer greater than 1`
+        );
+      }
+      return null;
     }
 
     return new Error(
@@ -343,18 +245,17 @@ const fractionsType = (props, propName, componentName) => {
 };
 
 Rating.propTypes = {
-  type: PropTypes.string,
-  ratingImage: Image.propTypes.source,
-  ratingColor: PropTypes.string,
-  ratingBackgroundColor: PropTypes.string,
-  ratingCount: PropTypes.number,
-  imageSize: PropTypes.number,
-  onFinishRating: PropTypes.func,
-  showRating: PropTypes.bool,
-  style: ViewPropTypes.style,
-  ratingTextColor: PropTypes.string,
-  readonly: PropTypes.bool,
-  showReadOnlyText: PropTypes.bool,
-  startingValue: PropTypes.number,
+  blankIconColor: PropTypes.string,
+  blankIconName: PropTypes.string,
   fractions: fractionsType,
+  fullIconColor: PropTypes.string,
+  fullIconName: PropTypes.string,
+  iconSize: PropTypes.number,
+  maxValue: PropTypes.number,
+  onChangeValue: PropTypes.func,
+  readonly: PropTypes.bool,
+  style: ViewPropTypes.style,
+  value: PropTypes.number,
 };
+
+export default Rating;

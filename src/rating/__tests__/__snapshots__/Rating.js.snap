@@ -2,1667 +2,1393 @@
 
 exports[`Rating Component should render 10 images 1`] = `
 <View
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
   pointerEvents="auto"
+  style={
+    Array [
+      Object {
+        "display": "flex",
+        "position": "relative",
+      },
+      undefined,
+      Object {
+        "height": 40,
+        "width": 400,
+      },
+    ]
+  }
 >
   <View
-    onMoveShouldSetResponder={[Function]}
-    onMoveShouldSetResponderCapture={[Function]}
-    onResponderEnd={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderReject={[Function]}
-    onResponderRelease={[Function]}
-    onResponderStart={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    onStartShouldSetResponderCapture={[Function]}
     style={
-      Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "position": "absolute",
+        },
+        Object {},
+      ]
     }
   >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "bottom": 0,
-          "flexDirection": "row",
-          "justifyContent": "center",
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
-      }
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
     >
-      <AnimatedComponent
+      <Icon
+        color="#FFC423"
+        name="star-border"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
         style={
           Object {
-            "backgroundColor": "#f1c40f",
-            "height": 60,
-            "width": 300,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-      <AnimatedComponent
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star-border"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
         style={
           Object {
-            "backgroundColor": "white",
-            "height": 60,
-            "width": 300,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star-border"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
         style={
           Object {
-            "height": 60,
-            "width": 60,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star-border"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
         style={
           Object {
-            "height": 60,
-            "width": 60,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star-border"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
         style={
           Object {
-            "height": 60,
-            "width": 60,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star-border"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
         style={
           Object {
-            "height": 60,
-            "width": 60,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star-border"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
         style={
           Object {
-            "height": 60,
-            "width": 60,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star-border"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
         style={
           Object {
-            "height": 60,
-            "width": 60,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star-border"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
         style={
           Object {
-            "height": 60,
-            "width": 60,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star-border"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
         style={
           Object {
-            "height": 60,
-            "width": 60,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
+    </TouchableOpacity>
   </View>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "position": "absolute",
+        },
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "width": 0,
+        },
+      ]
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </AnimatedComponent>
 </View>
 `;
 
-exports[`Rating Component should render custom background color 1`] = `
+exports[`Rating Component should render custom icon 1`] = `
 <View
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
   pointerEvents="auto"
+  style={
+    Array [
+      Object {
+        "display": "flex",
+        "position": "relative",
+      },
+      undefined,
+      Object {
+        "height": 40,
+        "width": 200,
+      },
+    ]
+  }
 >
   <View
-    onMoveShouldSetResponder={[Function]}
-    onMoveShouldSetResponderCapture={[Function]}
-    onResponderEnd={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderReject={[Function]}
-    onResponderRelease={[Function]}
-    onResponderStart={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    onStartShouldSetResponderCapture={[Function]}
     style={
-      Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "position": "absolute",
+        },
+        Object {},
+      ]
     }
   >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "bottom": 0,
-          "flexDirection": "row",
-          "justifyContent": "center",
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
-      }
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
     >
-      <AnimatedComponent
+      <Icon
+        color="#ddd"
+        name="help-outline"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
         style={
           Object {
-            "backgroundColor": "green",
-            "height": 60,
-            "width": 150,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-      <AnimatedComponent
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#ddd"
+        name="help-outline"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
         style={
           Object {
-            "backgroundColor": "darkgreen",
-            "height": 60,
-            "width": 150,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
-          }
-        }
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#ddd"
+        name="help-outline"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
         style={
           Object {
-            "height": 60,
-            "width": 60,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
-          }
-        }
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#ddd"
+        name="help-outline"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
         style={
           Object {
-            "height": 60,
-            "width": 60,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
-          }
-        }
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#ddd"
+        name="help-outline"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
         style={
           Object {
-            "height": 60,
-            "width": 60,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
+    </TouchableOpacity>
   </View>
-</View>
-`;
-
-exports[`Rating Component should render custom color 1`] = `
-<View
-  pointerEvents="auto"
->
-  <View
-    onMoveShouldSetResponder={[Function]}
-    onMoveShouldSetResponderCapture={[Function]}
-    onResponderEnd={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderReject={[Function]}
-    onResponderRelease={[Function]}
-    onResponderStart={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    onStartShouldSetResponderCapture={[Function]}
+  <AnimatedComponent
     style={
-      Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "position": "absolute",
+        },
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "width": 0,
+        },
+      ]
     }
   >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "bottom": 0,
-          "flexDirection": "row",
-          "justifyContent": "center",
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
-      }
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
     >
-      <AnimatedComponent
+      <Icon
+        color="#dba"
+        name="help"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
         style={
           Object {
-            "backgroundColor": "green",
-            "height": 60,
-            "width": 150,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-      <AnimatedComponent
-        style={
-          Object {
-            "backgroundColor": "white",
-            "height": 60,
-            "width": 150,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-  </View>
-</View>
-`;
-
-exports[`Rating Component should render custom images 1`] = `
-<View
-  pointerEvents="auto"
->
-  <View
-    onMoveShouldSetResponder={[Function]}
-    onMoveShouldSetResponderCapture={[Function]}
-    onResponderEnd={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderReject={[Function]}
-    onResponderRelease={[Function]}
-    onResponderStart={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    onStartShouldSetResponderCapture={[Function]}
-    style={
-      Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "bottom": 0,
-          "flexDirection": "row",
-          "justifyContent": "center",
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
-      }
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
     >
-      <AnimatedComponent
+      <Icon
+        color="#dba"
+        name="help"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
         style={
           Object {
-            "backgroundColor": "#f1c40f",
-            "height": 60,
-            "width": 150,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-      <AnimatedComponent
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#dba"
+        name="help"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
         style={
           Object {
-            "backgroundColor": "white",
-            "height": 60,
-            "width": 150,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
-          }
-        }
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#dba"
+        name="help"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
         style={
           Object {
-            "height": 60,
-            "width": 60,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
-          }
-        }
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#dba"
+        name="help"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
         style={
           Object {
-            "height": 60,
-            "width": 60,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "uri": "https://image.freepik.com/free-icon/smiley_318-121680.jpg",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-  </View>
+    </TouchableOpacity>
+  </AnimatedComponent>
 </View>
 `;
 
 exports[`Rating Component should render images with the size of 30 1`] = `
 <View
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
   pointerEvents="auto"
+  style={
+    Array [
+      Object {
+        "display": "flex",
+        "position": "relative",
+      },
+      undefined,
+      Object {
+        "height": 30,
+        "width": 150,
+      },
+    ]
+  }
 >
   <View
-    onMoveShouldSetResponder={[Function]}
-    onMoveShouldSetResponderCapture={[Function]}
-    onResponderEnd={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderReject={[Function]}
-    onResponderRelease={[Function]}
-    onResponderStart={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    onStartShouldSetResponderCapture={[Function]}
     style={
-      Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "position": "absolute",
+        },
+        Object {},
+      ]
     }
   >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "bottom": 0,
-          "flexDirection": "row",
-          "justifyContent": "center",
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
-      }
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
     >
-      <AnimatedComponent
+      <Icon
+        color="#FFC423"
+        name="star-border"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={30}
         style={
           Object {
-            "backgroundColor": "#f1c40f",
-            "height": 30,
-            "width": 75,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-      <AnimatedComponent
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star-border"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={30}
         style={
           Object {
-            "backgroundColor": "white",
-            "height": 30,
-            "width": 75,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star-border"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={30}
         style={
           Object {
-            "height": 30,
-            "width": 30,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star-border"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={30}
         style={
           Object {
-            "height": 30,
-            "width": 30,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star-border"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={30}
         style={
           Object {
-            "height": 30,
-            "width": 30,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 30,
-            "width": 30,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 30,
-            "width": 30,
-          }
-        }
-      />
-    </View>
+    </TouchableOpacity>
   </View>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "position": "absolute",
+        },
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "width": 0,
+        },
+      ]
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={30}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={30}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={30}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={30}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={30}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </AnimatedComponent>
 </View>
 `;
 
 exports[`Rating Component should render in readonly mode 1`] = `
 <View
   pointerEvents="none"
->
-  <View
-    onMoveShouldSetResponder={[Function]}
-    onMoveShouldSetResponderCapture={[Function]}
-    onResponderEnd={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderReject={[Function]}
-    onResponderRelease={[Function]}
-    onResponderStart={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    onStartShouldSetResponderCapture={[Function]}
-    style={
+  style={
+    Array [
       Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "bottom": 0,
-          "flexDirection": "row",
-          "justifyContent": "center",
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
-      }
-    >
-      <AnimatedComponent
-        style={
-          Object {
-            "backgroundColor": "#f1c40f",
-            "height": 60,
-            "width": 150,
-          }
-        }
-      />
-      <AnimatedComponent
-        style={
-          Object {
-            "backgroundColor": "white",
-            "height": 60,
-            "width": 150,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-  </View>
-</View>
-`;
-
-exports[`Rating Component should render rating label 1`] = `
-<View
-  pointerEvents="auto"
+        "display": "flex",
+        "position": "relative",
+      },
+      undefined,
+      Object {
+        "height": 40,
+        "width": 200,
+      },
+    ]
+  }
 >
   <View
     style={
-      Object {
-        "alignItems": "center",
-        "flexDirection": "column",
-        "justifyContent": "center",
-        "paddingBottom": 5,
-      }
-    }
-  >
-    <View
-      style={
+      Array [
         Object {
-          "alignItems": "center",
           "flexDirection": "row",
-          "justifyContent": "center",
-          "paddingBottom": 5,
-        }
-      }
-    >
-      <TextElement
-        style={
-          Array [
-            Object {
-              "color": "#34495e",
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 15,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
-        }
-      >
-        Rating: 
-      </TextElement>
-      <TextElement
-        style={
-          Array [
-            Object {
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 30,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
-        }
-      >
-        3
-      </TextElement>
-      <TextElement
-        style={
-          Array [
-            Object {
-              "color": "#34495e",
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 18,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
-        }
-      >
-        /
-        5
-      </TextElement>
-    </View>
-    <View />
-  </View>
-  <View
-    onMoveShouldSetResponder={[Function]}
-    onMoveShouldSetResponderCapture={[Function]}
-    onResponderEnd={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderReject={[Function]}
-    onResponderRelease={[Function]}
-    onResponderStart={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    onStartShouldSetResponderCapture={[Function]}
-    style={
-      Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "bottom": 0,
-          "flexDirection": "row",
-          "justifyContent": "center",
-          "left": 0,
+          "flexWrap": "nowrap",
           "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
-      }
-    >
-      <AnimatedComponent
-        style={
-          Object {
-            "backgroundColor": "#f1c40f",
-            "height": 60,
-            "width": 150,
-          }
-        }
-      />
-      <AnimatedComponent
-        style={
-          Object {
-            "backgroundColor": "white",
-            "height": 60,
-            "width": 150,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-  </View>
-</View>
-`;
-
-exports[`Rating Component should render value with 2 decimal places 1`] = `
-<View
-  pointerEvents="auto"
->
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "flexDirection": "column",
-        "justifyContent": "center",
-        "paddingBottom": 5,
-      }
+        },
+        Object {},
+      ]
     }
   >
-    <View
+    <Icon
+      color="#FFC423"
+      name="star-border"
+      raised={false}
+      reverse={false}
+      reverseColor="white"
+      size={40}
       style={
         Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "justifyContent": "center",
-          "paddingBottom": 5,
+          "flex": 1,
         }
       }
-    >
-      <TextElement
-        style={
-          Array [
-            Object {
-              "color": "#34495e",
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 15,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
+      underlayColor="white"
+    />
+    <Icon
+      color="#FFC423"
+      name="star-border"
+      raised={false}
+      reverse={false}
+      reverseColor="white"
+      size={40}
+      style={
+        Object {
+          "flex": 1,
         }
-      >
-        Rating: 
-      </TextElement>
-      <TextElement
-        style={
-          Array [
-            Object {
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 30,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
+      }
+      underlayColor="white"
+    />
+    <Icon
+      color="#FFC423"
+      name="star-border"
+      raised={false}
+      reverse={false}
+      reverseColor="white"
+      size={40}
+      style={
+        Object {
+          "flex": 1,
         }
-      >
-        2.5
-      </TextElement>
-      <TextElement
-        style={
-          Array [
-            Object {
-              "color": "#34495e",
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 18,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
+      }
+      underlayColor="white"
+    />
+    <Icon
+      color="#FFC423"
+      name="star-border"
+      raised={false}
+      reverse={false}
+      reverseColor="white"
+      size={40}
+      style={
+        Object {
+          "flex": 1,
         }
-      >
-        /
-        5
-      </TextElement>
-    </View>
-    <View />
+      }
+      underlayColor="white"
+    />
+    <Icon
+      color="#FFC423"
+      name="star-border"
+      raised={false}
+      reverse={false}
+      reverseColor="white"
+      size={40}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+      underlayColor="white"
+    />
   </View>
-  <View
-    onMoveShouldSetResponder={[Function]}
-    onMoveShouldSetResponderCapture={[Function]}
-    onResponderEnd={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderReject={[Function]}
-    onResponderRelease={[Function]}
-    onResponderStart={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    onStartShouldSetResponderCapture={[Function]}
+  <AnimatedComponent
     style={
-      Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
-    }
-  >
-    <View
-      style={
+      Array [
         Object {
-          "alignItems": "center",
-          "bottom": 0,
           "flexDirection": "row",
-          "justifyContent": "center",
-          "left": 0,
+          "flexWrap": "nowrap",
           "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
-      }
-    >
-      <AnimatedComponent
-        style={
-          Object {
-            "backgroundColor": "#f1c40f",
-            "height": 60,
-            "width": 150,
-          }
-        }
-      />
-      <AnimatedComponent
-        style={
-          Object {
-            "backgroundColor": "white",
-            "height": 60,
-            "width": 150,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-  </View>
-</View>
-`;
-
-exports[`Rating Component should render with an initial value of 3.3 1`] = `
-<View
-  pointerEvents="auto"
->
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "flexDirection": "column",
-        "justifyContent": "center",
-        "paddingBottom": 5,
-      }
+        },
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "width": 0,
+        },
+      ]
     }
   >
-    <View
+    <Icon
+      color="#FFC423"
+      name="star"
+      raised={false}
+      reverse={false}
+      reverseColor="white"
+      size={40}
       style={
         Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "justifyContent": "center",
-          "paddingBottom": 5,
+          "flex": 1,
         }
       }
-    >
-      <TextElement
-        style={
-          Array [
-            Object {
-              "color": "#34495e",
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 15,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
-        }
-      >
-        Rating: 
-      </TextElement>
-      <TextElement
-        style={
-          Array [
-            Object {
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 30,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
-        }
-      >
-        3
-      </TextElement>
-      <TextElement
-        style={
-          Array [
-            Object {
-              "color": "#34495e",
-              "fontFamily": "Trebuchet MS",
-              "fontSize": 18,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#f1c40f",
-            },
-          ]
-        }
-      >
-        /
-        5
-      </TextElement>
-    </View>
-    <View />
-  </View>
-  <View
-    onMoveShouldSetResponder={[Function]}
-    onMoveShouldSetResponderCapture={[Function]}
-    onResponderEnd={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderReject={[Function]}
-    onResponderRelease={[Function]}
-    onResponderStart={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    onStartShouldSetResponderCapture={[Function]}
-    style={
-      Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
-    }
-  >
-    <View
+      underlayColor="white"
+    />
+    <Icon
+      color="#FFC423"
+      name="star"
+      raised={false}
+      reverse={false}
+      reverseColor="white"
+      size={40}
       style={
         Object {
-          "alignItems": "center",
-          "bottom": 0,
-          "flexDirection": "row",
-          "justifyContent": "center",
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
+          "flex": 1,
         }
       }
-    >
-      <AnimatedComponent
-        style={
-          Object {
-            "backgroundColor": "#f1c40f",
-            "height": 60,
-            "width": 150,
-          }
+      underlayColor="white"
+    />
+    <Icon
+      color="#FFC423"
+      name="star"
+      raised={false}
+      reverse={false}
+      reverseColor="white"
+      size={40}
+      style={
+        Object {
+          "flex": 1,
         }
-      />
-      <AnimatedComponent
-        style={
-          Object {
-            "backgroundColor": "white",
-            "height": 60,
-            "width": 150,
-          }
+      }
+      underlayColor="white"
+    />
+    <Icon
+      color="#FFC423"
+      name="star"
+      raised={false}
+      reverse={false}
+      reverseColor="white"
+      size={40}
+      style={
+        Object {
+          "flex": 1,
         }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
+      }
+      underlayColor="white"
+    />
+    <Icon
+      color="#FFC423"
+      name="star"
+      raised={false}
+      reverse={false}
+      reverseColor="white"
+      size={40}
+      style={
+        Object {
+          "flex": 1,
         }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-  </View>
+      }
+      underlayColor="white"
+    />
+  </AnimatedComponent>
 </View>
 `;
 
 exports[`Rating Component should render without issues 1`] = `
 <View
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
   pointerEvents="auto"
+  style={
+    Array [
+      Object {
+        "display": "flex",
+        "position": "relative",
+      },
+      undefined,
+      Object {
+        "height": 40,
+        "width": 200,
+      },
+    ]
+  }
 >
   <View
-    onMoveShouldSetResponder={[Function]}
-    onMoveShouldSetResponderCapture={[Function]}
-    onResponderEnd={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderReject={[Function]}
-    onResponderRelease={[Function]}
-    onResponderStart={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    onStartShouldSetResponderCapture={[Function]}
     style={
-      Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "position": "absolute",
+        },
+        Object {},
+      ]
     }
   >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "bottom": 0,
-          "flexDirection": "row",
-          "justifyContent": "center",
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
-      }
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
     >
-      <AnimatedComponent
+      <Icon
+        color="#FFC423"
+        name="star-border"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
         style={
           Object {
-            "backgroundColor": "#f1c40f",
-            "height": 60,
-            "width": 150,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-      <AnimatedComponent
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star-border"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
         style={
           Object {
-            "backgroundColor": "white",
-            "height": 60,
-            "width": 150,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star-border"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
         style={
           Object {
-            "height": 60,
-            "width": 60,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star-border"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
         style={
           Object {
-            "height": 60,
-            "width": 60,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star-border"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
         style={
           Object {
-            "height": 60,
-            "width": 60,
+            "flex": 1,
           }
         }
+        underlayColor="white"
       />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
-    <View>
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/rating/images/star.png",
-          }
-        }
-        style={
-          Object {
-            "height": 60,
-            "width": 60,
-          }
-        }
-      />
-    </View>
+    </TouchableOpacity>
   </View>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "position": "absolute",
+        },
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "width": 0,
+        },
+      ]
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Icon
+        color="#FFC423"
+        name="star"
+        raised={false}
+        reverse={false}
+        reverseColor="white"
+        size={40}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        underlayColor="white"
+      />
+    </TouchableOpacity>
+  </AnimatedComponent>
 </View>
 `;
