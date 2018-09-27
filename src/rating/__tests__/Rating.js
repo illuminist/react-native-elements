@@ -8,7 +8,7 @@ import { Animated } from 'react-native';
 
 import Rating from '../Rating';
 
-describe.only('Rating Component', function() {
+describe('Rating Component', function() {
   let onChangeValue;
 
   beforeEach(function() {
