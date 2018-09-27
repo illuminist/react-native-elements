@@ -7,57 +7,41 @@ An extendable Ratings components for React Native with gestures and an intuitive
 
 > This component was inspired from [react-native-ratings](https://github.com/Monte9/react-native-ratings) by [Monte Thakkar](https://github.com/Monte9).
 
-### Demo
-
-<img src="/react-native-elements/img/rating_component.gif" width="500" >
-
 ```js
 import { Rating } from 'react-native-elements';
 
-ratingCompleted(rating) {
+handleRatingChange(rating) {
   console.log("Rating is: " + rating)
 }
 
 <Rating
-  showRating
-  onFinishRating={this.ratingCompleted}
-  style={{ paddingVertical: 10 }}
+  onValueChange={this.handleRatingChange}
+  style={{ paddingVertical: 24 }}
 />
 
 <Rating
-  showRating
-  type="star"
+  blankIconColor="#FF918E"
+  blankIconName="favorite-border"
+  fullIconColor="#FF1C16"
+  fullIconName="favorite"
   fractions={1}
-  startingValue={3.6}
+  value={3.6}
   readonly
-  imageSize={40}
-  onFinishRating={this.ratingCompleted}
-  style={{ paddingVertical: 10 }}
+  iconSize={60}
+  style={{ paddingVertical: 24 }}
 />
 
 <Rating
-  type="heart"
-  ratingCount={3}
-  fractions={2}
-  startingValue={1.57}
-  imageSize={40}
-  onFinishRating={this.ratingCompleted}
-  showRating
-  style={{ paddingVertical: 10 }}
-/>
-
-
-const WATER_IMAGE = require('./water.png')
-
-<Rating
-  type='custom'
-  ratingImage={WATER_IMAGE}
-  ratingColor='#3498db'
-  ratingBackgroundColor='#c8c7c8'
-  ratingCount={10}
-  imageSize={30}
-  onFinishRating={this.ratingCompleted}
-  style={{ paddingVertical: 10 }}
+  blankIconColor="#A8C1AF"
+  blankIconName="school"
+  fullIconColor="#20BB34"
+  fullIconName="school"
+  maxValue={10}
+  iconSize={24}
+  fractions={0.5}
+  value={8.5}
+  onValueChange={this.handleRatingChange}
+  style={{ paddingVertical: 24 }}
 />
 ```
 
@@ -67,47 +51,41 @@ const WATER_IMAGE = require('./water.png')
 const { rating } = this.props;
 
 <Rating
-  imageSize={20}
+  iconSize={20}
   readonly
-  startingValue={rating}
+  value={rating}
   style={{ styles.rating }}
 />
 ```
 
-![readonly demo jpg](/react-native-elements/img/rating_readonly.jpg)
-
 ##### Fractions
 
 ```html
-<Rating showRating fractions={1} startingValue={3.3} />
+<Rating fractions={1} startingValue={3.3} />
+<Rating fractions={0.25} startingValue={4.75} />
 ```
-
-![Fractions demo gif](https://cloud.githubusercontent.com/assets/241553/26780040/e8cd1a2c-49f8-11e7-8859-6dd9b4e0a779.gif)
 
 ---
 
 ### Props
 
-* [`onFinishRating`](#onfinishrating)
+* [`onValueChange`](#onValueChange)
+* [`blankIconColor`](#blankIconColor)
+* [`blankIconName`](#blankIconName)
+* [`fullIconColor`](#fullIconColor)
+* [`fullIconName`](#fullIconName)
 * [`fractions`](#fractions)
-* [`imageSize`](#imagesize)
-* [`ratingBackgroundColor`](#ratingbackgroundcolor)
-* [`ratingColor`](#ratingcolor)
-* [`ratingCount`](#ratingcount)
-* [`ratingImage`](#ratingimage)
-* [`ratingTextColor`](#ratingtextcolor)
+* [`iconSize`](#iconSize)
+* [`maxValue`](#maxValue)
+* [`value`](#value)
 * [`readonly`](#readonly)
-* [`showRating`](#showrating)
-* [`showReadOnlyText`](#showreadonlytext)
-* [`startingValue`](#startingvalue)
 * [`style`](#style)
-* [`type`](#type)
 
 ---
 
 # Reference
 
-### `onFinishRating`
+### `onValueChange`
 
 Callback method when the user finishes rating. Gives you the final rating value as a whole number **(required)**
 
@@ -117,49 +95,67 @@ Callback method when the user finishes rating. Gives you the final rating value 
 
 ---
 
-### `fractions`
+### `blankIconColor`
 
-The number of decimal places for the rating value; must be between 0 and 20 (optional)
+Pass in a color props for the background icon (optional)
 
-|  Type  |  Default  |
-| :----: | :-------: |
-| number | undefined |
+|      Type      |  Default  |
+| :------------: | :-------: |
+| string (color) |  #FFC423  |
 
 ---
 
-### `imageSize`
+### `blankIconName`
 
-The size of each rating image (optional)
+Pass in an icon name to be use as the background icons (optional)
+
+|  Type  |    Default    |
+| :----: | :-----------: |
+| string |  star-border  |
+
+---
+
+### `fullIconColor`
+
+Pass in a color props for the foreground icon (optional)
+
+|      Type      |  Default  |
+| :------------: | :-------: |
+| string (color) |  #FFC423  |
+
+---
+
+### `fullIconName`
+
+Pass in an icon name to be use as the foreground icons (optional)
 
 |  Type  | Default |
 | :----: | :-----: |
-| number |   50    |
+| string |  star   |
+
+---### `fractions`
+
+The number of decimal places for the rating value or a value of 1/x; must be between 0 and 20 (optional)
+
+|  Type  | Default |
+| :----: | :-----: |
+| number |    0    |
 
 ---
 
-### `ratingBackgroundColor`
+### `iconSize`
 
-Pass in a custom background-fill-color for the rating icon; use this along with `type='custom'` prop above (optional)
+The size of each rating icon (optional)
 
-|      Type      | Default |
-| :------------: | :-----: |
-| string (color) |  white  |
-
----
-
-### `ratingColor`
-
-Pass in a custom fill-color for the rating icon; use this along with `type='custom'` prop above (optional)
-
-|      Type      | Default |
-| :------------: | :-----: |
-| string (color) | #f1c40f |
+|  Type  | Default |
+| :----: | :-----: |
+| number |   40    |
 
 ---
 
-### `ratingCount`
+### `maxValue`
 
-The number of rating images to display (optional)
+The maximum value user can input. Represented by number of rating icon (optional)
 
 |  Type  | Default |
 | :----: | :-----: |
@@ -167,23 +163,13 @@ The number of rating images to display (optional)
 
 ---
 
-### `ratingImage`
+### `value`
 
-Pass in a custom image source; use this along with `type='custom'` prop above (optional)
+The initial rating value (optional)
 
 |  Type  | Default |
 | :----: | :-----: |
-| string |  star   |
-
----
-
-### `ratingTextColor`
-
-Pass in a custom text color for the rating text (optional)
-
-|      Type      | Default |
-| :------------: | :-----: |
-| string (color) | #f1c40f |
+| number |    3    |
 
 ---
 
@@ -197,36 +183,6 @@ Whether the rating can be modiefied by the user (optional)
 
 ---
 
-### `showRating`
-
-Displays the Built-in Rating UI to show the rating value in real-time (optional)
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  none   |
-
----
-
-### `showReadOnlyText`
-
-Whether to show the read only text or not (optional)
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  true   |
-
----
-
-### `startingValue`
-
-The initial rating to render (optional)
-
-|  Type  |     Default     |
-| :----: | :-------------: |
-| number | ratingCount / 2 |
-
----
-
 ### `style`
 
 Exposes style prop to add additonal styling to the container view (optional)
@@ -235,12 +191,3 @@ Exposes style prop to add additonal styling to the container view (optional)
 | :------: | :-----: |
 | function |  none   |
 
----
-
-### `type`
-
-Choose one of the built-in types: `star`, `rocket`, `bell`, `heart` or use type `custom` to render a custom image (optional)
-
-|  Type  | Default |
-| :----: | :-----: |
-| string |  star   |
